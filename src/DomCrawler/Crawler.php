@@ -33,8 +33,10 @@ final class Crawler extends BaseCrawler implements WebDriverElement
 
     /**
      * @param WebDriverElement[] $elements
+     * @param WebDriver|null $webDriver
+     * @param string|null $uri
      */
-    public function __construct(array $elements = [], WebDriver $webDriver, ?string $uri = null)
+    public function __construct(array $elements = [], WebDriver $webDriver=null, ?string $uri = null)
     {
         $this->uri = $uri;
         $this->webDriver = $webDriver;
